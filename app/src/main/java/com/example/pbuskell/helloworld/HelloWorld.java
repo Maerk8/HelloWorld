@@ -11,6 +11,8 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.w3c.dom.Text;
+
 public class HelloWorld extends AppCompatActivity {
 
     /**
@@ -21,6 +23,8 @@ public class HelloWorld extends AppCompatActivity {
 
     Button btnSayHello;
     TextView txtOutput;
+    Button btnSayGoodbye;
+    TextView TextOutput2;
 
 
     @Override
@@ -30,6 +34,9 @@ public class HelloWorld extends AppCompatActivity {
 
         btnSayHello = (Button)findViewById(R.id.btnSayHello);
         txtOutput = (TextView)findViewById(R.id.txtOutput);
+        btnSayGoodbye = (Button)findViewById(R.id.btnSayGoodbye);
+        TextOutput2 = (TextView)findViewById(R.id.TextOutput2);
+
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -40,6 +47,12 @@ public class HelloWorld extends AppCompatActivity {
     {
         txtOutput.setText(R.string.strMessage);
     }
+    public void sayGoodbye(View vw)
+    {
+        TextOutput2.setText(R.string.strMessage2);
+    }
+
+
 
     @Override
     public void onStart() {
